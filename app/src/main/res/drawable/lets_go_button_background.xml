@@ -9,7 +9,7 @@
                 android:endColor="#FF774C"
                 android:startColor="#F9881F"
                 android:type="linear" />
-            <corners android:radius="50dp" />
+            <corners android:radius="51dp" />
         </shape>
     </item>
 </ripple>
