@@ -102,17 +102,17 @@
             android:textAllCaps="false"
             android:id="@+id/pickADate"
             />
-
     </LinearLayout>
 
-    <Button
-        android:layout_width="wrap_content"
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Let's Go"
         android:textSize="24dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:textAllCaps="false"/>
-
+        android:textAllCaps="false"
+        android:background="@drawable/lets_go_button_background"
+        android:layout_margin="20dp"/>
 
 </RelativeLayout>
