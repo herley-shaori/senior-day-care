@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="tombol.warna.hitam" parent="">
+        <item name="shapeAppearance">@drawable/rounded_corners_button</item>
+    </style>
+
+    <style name="AppTheme.RoundedCornerMaterialButton" parent="">
+        <item name="shapeAppearance">@drawable/rounded_corners_button</item>
+        <item name="backgroundTint">@color/black</item>
+    </style>
+</resources>

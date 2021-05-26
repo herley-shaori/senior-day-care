@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DaycareDateActivity">
+
+    <TextView
+        android:id="@+id/welcomeBackAlen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Welcome back, Alen!"
+        android:textColor="#05BBCE"
+        android:textSize="32dp" />
+
+    <LinearLayout
+        android:id="@+id/tigaTombolServis"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/welcomeBackAlen">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Senior Daycare"
+            android:textAllCaps="false"
+            android:layout_weight="0.3"
+            android:background="#FFEFD9"
+            android:layout_margin="5dp"
+            android:textSize="15dp"
+            android:textColor="#FF8473"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Antar Jemput"
+            android:textAllCaps="false"
+            android:layout_weight="0.3"
+            android:background="#FFEFD9"
+            android:layout_margin="5dp"
+            android:textSize="15dp"
+            android:textColor="#FF8473"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Event"
+            android:textAllCaps="false"
+            android:layout_weight="0.3"
+            android:background="#FFEFD9"
+            android:layout_margin="5dp"
+            android:textSize="15dp"
+            android:textColor="#FF8473"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pilih lokasi senior daycare"
+        android:textSize="18dp"
+        android:layout_centerVertical="true"
+        android:textColor="#05BBCE"
+        android:id="@+id/lokasi_senior_daycare"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        />
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24dp"
+        android:layout_below="@+id/lokasi_senior_daycare"
+        android:entries="@array/lokasiDaycare"
+        android:id="@+id/spinnerLokasiDaycare"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/layout_clickable"
+        android:layout_below="@id/spinnerLokasiDaycare"
+        android:clickable="true"
+        android:orientation="horizontal"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24dp"
+            android:clickable="true"
+            android:enabled="false"
+            android:id="@+id/pilihTanggalInputEditText"
+            android:layout_weight="0.9"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pilih\nTanggal"
+            android:layout_weight="0.1"
+            android:textAllCaps="false"
+            android:id="@+id/pickADate"
+            />
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Let's Go"
+        android:textSize="24dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:textAllCaps="false"/>
+
+
+</RelativeLayout>
