@@ -15,7 +15,7 @@
         android:textSize="32dp" />
 
     <LinearLayout
-        android:id="@+id/tigaTombolServis"
+        android:id="@+id/menuAtas"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -55,6 +55,13 @@
             android:textColor="#FF8473"/>
     </LinearLayout>
 
+    <View
+        android:id="@+id/dividerAtas"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider"
+        android:layout_below="@id/menuAtas"/>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -82,6 +89,7 @@
         android:layout_below="@id/spinnerLokasiDaycare"
         android:clickable="true"
         android:orientation="horizontal"
+        android:id="@+id/linearTanggal"
         >
 
         <com.google.android.material.textfield.TextInputEditText
@@ -108,13 +116,51 @@
         android:layout_height="wrap_content"
         android:text="Let's Go"
         android:textSize="24dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
+        android:layout_below="@id/linearTanggal"
         android:textAllCaps="false"
         android:background="@drawable/lets_go_button_background"
         android:layout_margin="20dp"
         android:id="@+id/goButton"
         android:enabled="false"
         android:textColor="#FDFFFF"/>
+
+    <View
+        android:id="@+id/dividerBawah"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider"
+        android:layout_above="@id/menuBawah"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/menuBawah"
+        android:layout_alignParentBottom="true">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Home"
+            android:textAllCaps="false"
+            android:layout_weight="0.3"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="My Order"
+            android:textAllCaps="false"
+            android:layout_weight="0.3"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Awards"
+            android:textAllCaps="false"
+            android:layout_weight="0.3"
+            />
+    </LinearLayout>
 
 </RelativeLayout>
