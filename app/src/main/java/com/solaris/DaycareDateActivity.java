@@ -66,6 +66,7 @@ public class DaycareDateActivity extends AppCompatActivity {
                  * Update TextView dengan tanggal yang kita pilih
                  */
                 tvDateResult.setText(dateFormatter.format(newDate.getTime()));
+                findViewById(R.id.goButton).setEnabled(true);
             }
 
         }, newCalendar.get(Calendar.YEAR), newCalendar.get(Calendar.MONTH), newCalendar.get(Calendar.DAY_OF_MONTH));
