@@ -146,11 +146,12 @@
             android:layout_weight="0.3"
             android:background="@drawable/triple_button_bawah_activity_daycare_date"
             android:textColor="@color/white"
+            android:enabled="false"
             />
 
         <View
             android:id="@+id/divider2"
-            android:layout_width="5dp"
+            android:layout_width="2dp"
             android:layout_height="match_parent"
             android:foreground="@color/white"
             android:background="?android:attr/listDivider" />
@@ -163,11 +164,12 @@
             android:layout_weight="0.3"
             android:background="@drawable/triple_button_bawah_activity_daycare_date"
             android:textColor="@color/white"
+            android:enabled="false"
             />
 
         <View
             android:id="@+id/divider3"
-            android:layout_width="5dp"
+            android:layout_width="2dp"
             android:layout_height="match_parent"
             android:foreground="@color/white"
             android:background="?android:attr/listDivider" />
@@ -180,6 +182,7 @@
             android:layout_weight="0.3"
             android:background="@drawable/triple_button_bawah_activity_daycare_date"
             android:textColor="@color/white"
+            android:enabled="false"
             />
     </LinearLayout>
 </RelativeLayout>
