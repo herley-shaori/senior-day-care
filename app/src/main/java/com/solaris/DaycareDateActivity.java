@@ -1,14 +1,13 @@
 package com.solaris;
 
-import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.DatePickerDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.DatePicker;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -33,6 +32,10 @@ public class DaycareDateActivity extends AppCompatActivity {
         this.tvDateResult = findViewById(R.id.pilihTanggalInputEditText);
 
         findViewById(R.id.pickADate).setOnClickListener(v -> doPickADate());
+        findViewById(R.id.goButton).setOnClickListener(v -> {
+            Intent intent = new Intent(DaycareDateActivity.this, SelectDaycareLocationActivity.class);
+            startActivity(intent);
+        });
     }
 
     /**
@@ -47,28 +50,23 @@ public class DaycareDateActivity extends AppCompatActivity {
         /**
          * Initiate DatePicker dialog
          */
-        datePickerDialog = new DatePickerDialog(DaycareDateActivity.this, new DatePickerDialog.OnDateSetListener() {
+        datePickerDialog = new DatePickerDialog(DaycareDateActivity.this, (view, year, monthOfYear, dayOfMonth) -> {
 
-            @Override
-            public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
+            /**
+             * Method ini dipanggil saat kita selesai memilih tanggal di DatePicker
+             */
 
-                /**
-                 * Method ini dipanggil saat kita selesai memilih tanggal di DatePicker
-                 */
+            /**
+             * Set Calendar untuk menampung tanggal yang dipilih
+             */
+            Calendar newDate = Calendar.getInstance();
+            newDate.set(year, monthOfYear, dayOfMonth);
 
-                /**
-                 * Set Calendar untuk menampung tanggal yang dipilih
-                 */
-                Calendar newDate = Calendar.getInstance();
-                newDate.set(year, monthOfYear, dayOfMonth);
-
-                /**
-                 * Update TextView dengan tanggal yang kita pilih
-                 */
-                tvDateResult.setText(dateFormatter.format(newDate.getTime()));
-                findViewById(R.id.goButton).setEnabled(true);
-            }
-
+            /**
+             * Update TextView dengan tanggal yang kita pilih
+             */
+            tvDateResult.setText(dateFormatter.format(newDate.getTime()));
+            findViewById(R.id.goButton).setEnabled(true);
         }, newCalendar.get(Calendar.YEAR), newCalendar.get(Calendar.MONTH), newCalendar.get(Calendar.DAY_OF_MONTH));
 
         /**

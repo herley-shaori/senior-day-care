@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Solaris">
-        <activity android:name=".DaycareDateActivity"></activity>
+        <activity android:name=".SelectDaycareLocationActivity"
+            android:parentActivityName=".DaycareDateActivity"></activity>
+        <activity android:name=".DaycareDateActivity" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
