@@ -144,7 +144,16 @@
             android:text="Home"
             android:textAllCaps="false"
             android:layout_weight="0.3"
+            android:background="@drawable/triple_button_bawah_activity_daycare_date"
+            android:textColor="@color/white"
             />
+
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="5dp"
+            android:layout_height="match_parent"
+            android:foreground="@color/white"
+            android:background="?android:attr/listDivider" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:layout_width="wrap_content"
@@ -152,7 +161,16 @@
             android:text="My Order"
             android:textAllCaps="false"
             android:layout_weight="0.3"
+            android:background="@drawable/triple_button_bawah_activity_daycare_date"
+            android:textColor="@color/white"
             />
+
+        <View
+            android:id="@+id/divider3"
+            android:layout_width="5dp"
+            android:layout_height="match_parent"
+            android:foreground="@color/white"
+            android:background="?android:attr/listDivider" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:layout_width="wrap_content"
@@ -160,7 +178,8 @@
             android:text="Awards"
             android:textAllCaps="false"
             android:layout_weight="0.3"
+            android:background="@drawable/triple_button_bawah_activity_daycare_date"
+            android:textColor="@color/white"
             />
     </LinearLayout>
-
 </RelativeLayout>
