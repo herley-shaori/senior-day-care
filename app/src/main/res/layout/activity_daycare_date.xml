@@ -121,7 +121,7 @@
         android:background="@drawable/lets_go_button_background"
         android:layout_margin="20dp"
         android:id="@+id/goButton"
-        android:enabled="false"
+        android:enabled="true"
         android:textColor="#FDFFFF"/>
 
     <View

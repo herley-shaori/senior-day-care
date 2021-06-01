@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Solaris</string>
+    <string name="harga_kunjungan">350.000</string>
+    <string name="sisa_tempat">1</string>
 </resources>
